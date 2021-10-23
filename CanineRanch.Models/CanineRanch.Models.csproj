@@ -54,8 +54,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientCreate.cs" />
+    <Compile Include="ClientDetail.cs" />
+    <Compile Include="ClientEdit.cs" />
     <Compile Include="ClientListItem.cs" />
+    <Compile Include="DogCreate.cs" />
+    <Compile Include="DogDetail.cs" />
+    <Compile Include="DogEdit.cs" />
     <Compile Include="DogListItem.cs" />
+    <Compile Include="GroomingRequestCreate.cs" />
+    <Compile Include="GroomingRequestDetail.cs" />
     <Compile Include="GroomingRequestListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

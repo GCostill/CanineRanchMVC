@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace CanineRanch.Models
 {
-    class GroomingRequestListItem
+    class GroomingRequestCreate
     {
-        public int RequestID { get; set; }
         public string DogName { get; set; }
-        public DateTime RequestTimeStamp { get; set; }
+        public int GroomFrequescy { get; set; }
         public bool FirstTimeGroom { get; set; }
     }
 }
