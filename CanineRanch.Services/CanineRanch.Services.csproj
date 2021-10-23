@@ -63,5 +63,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CanineRanch.Data\CanineRanch.Data.csproj">
+      <Project>{52ACBB4F-092F-451C-932B-5038706FEB91}</Project>
+      <Name>CanineRanch.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CanineRanch.Models\CanineRanch.Models.csproj">
+      <Project>{23960CE5-37D3-40FC-BE00-7BD1CFF719AA}</Project>
+      <Name>CanineRanch.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
