@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CanineRanch.Models
 {
-    class DogDetail
+    public class DogDetail
     {
         public int DogID { get; set; }
         public string DogName { get; set; }

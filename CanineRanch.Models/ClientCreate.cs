@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CanineRanch.Models
 {
-    class ClientCreate
+    public class ClientCreate
     {
         public string FirstName { get; set; }
         [Required]

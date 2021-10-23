@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CanineRanch.Models
 {
-    class GroomingRequestCreate
+    public class GroomingRequestCreate
     {
         public string DogName { get; set; }
         public int GroomFrequescy { get; set; }
