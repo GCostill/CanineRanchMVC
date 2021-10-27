@@ -62,14 +62,14 @@ namespace CanineRanch.Services
             }
         }
 
-        public ClientDetail GetClientByLastName(string lastName)
+        public ClientDetail GetClientByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Clients
-                        .Single(e => e.LastName == lastName && e.ID == _userId);
+                        .Single(e => e.ClientID == id && e.ID == _userId);
                 return
                     new ClientDetail
                     {
