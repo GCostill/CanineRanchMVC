@@ -62,6 +62,14 @@
     <Compile Include="Migrations\202110262353099_InitialMigration.Designer.cs">
       <DependentUpon>202110262353099_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110281642363_AddedGuidIDToDog.cs" />
+    <Compile Include="Migrations\202110281642363_AddedGuidIDToDog.Designer.cs">
+      <DependentUpon>202110281642363_AddedGuidIDToDog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110282341501_IDsAddedToRequestModels.cs" />
+    <Compile Include="Migrations\202110282341501_IDsAddedToRequestModels.Designer.cs">
+      <DependentUpon>202110282341501_IDsAddedToRequestModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110262353099_InitialMigration.resx">
       <DependentUpon>202110262353099_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110281642363_AddedGuidIDToDog.resx">
+      <DependentUpon>202110281642363_AddedGuidIDToDog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110282341501_IDsAddedToRequestModels.resx">
+      <DependentUpon>202110282341501_IDsAddedToRequestModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

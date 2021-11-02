@@ -1,0 +1,72 @@
+﻿@model CanineRanch.Models.GroomingRequestDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GroomingRequestDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestTimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestTimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomFrequency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomFrequency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstTimeGroom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstTimeGroom)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

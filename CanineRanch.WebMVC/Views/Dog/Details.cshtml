@@ -1,0 +1,58 @@
+﻿@model CanineRanch.Models.DogDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DogDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DogID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFixed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFixed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

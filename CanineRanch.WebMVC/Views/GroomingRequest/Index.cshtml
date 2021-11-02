@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CanineRanch.Models.GroomingRequestListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DogName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestTimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstTimeGroom)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DogName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestTimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstTimeGroom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RequestID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RequestID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RequestID })
+        </td>
+    </tr>
+}
+
+</table>

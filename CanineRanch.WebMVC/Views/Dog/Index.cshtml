@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CanineRanch.Models.DogListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DogID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DogName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Breed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFixed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DogID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DogName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Breed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsFixed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DogID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DogID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DogID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -12,6 +12,7 @@ namespace CanineRanch.Data
     {
         [Key]
         public int RequestID { get; set; }
+        public Guid ID { get; set; }
         public DateTime RequestTimeStamp { get; set; }
         public int GroomFrequency { get; set; }
         [Required]

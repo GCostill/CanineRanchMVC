@@ -8,8 +8,9 @@ namespace CanineRanch.Models
 {
     public class GroomingRequestCreate
     {
+        public int DogID { get; set; }
         public string DogName { get; set; }
-        public int GroomFrequescy { get; set; }
+        public int GroomFrequency { get; set; }
         public bool FirstTimeGroom { get; set; }
     }
 }
