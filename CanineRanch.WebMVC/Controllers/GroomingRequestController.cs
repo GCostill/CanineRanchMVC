@@ -1,4 +1,5 @@
-﻿using CanineRanch.Models;
+﻿using CanineRanch.Data;
+using CanineRanch.Models;
 using CanineRanch.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -11,6 +12,7 @@ namespace CanineRanch.WebMVC.Controllers
 {
     public class GroomingRequestController : Controller
     {
+        private ApplicationDbContext _ctx = new ApplicationDbContext();
         // GET: GroomingRequest
         public ActionResult Index()
         {
@@ -22,7 +24,19 @@ namespace CanineRanch.WebMVC.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            ViewBag.DogNames = _ctx.Dogs.Select(dogs => new SelectListItem
+            {
+                Text = dogs.DogName,
+                Value = dogs.DogID.ToString()
+            });
+
+            ViewBag.LastName = _ctx.Clients.Select(lastNames => new SelectListItem
+            {
+                Text = lastNames.LastName,
+                Value = lastNames.ClientID.ToString()
+            });
+
+            return View(new GroomingRequestCreate());
         }
 
         [HttpPost]
@@ -38,11 +52,29 @@ namespace CanineRanch.WebMVC.Controllers
 
             if (service.CreateGroomingRequest(model))
             {
-                TempData["SaveResult"] = "Your grooming request was created.";
+                TempData["SaveResult"] = "Your request was created.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError(" ", "Grooming request could not be created.");
+            ModelState.AddModelError(" ", "Request could not be created.");
+
+            //if (ModelState.IsValid)
+            //{
+            //    GroomingRequest groomingRequest = new GroomingRequest
+            //    {
+            //        DogID = model.DogID,
+            //        ClientID = model.ClientID
+            //    };
+            //    _ctx.GroomingRequests.Add(groomingRequest);
+
+            //    if (_ctx.SaveChanges() == 1)
+            //    {
+            //        TempData["SaveResult"] = "Your request was created";
+            //        return RedirectToAction("Index");
+            //    }
+            //    ViewData["ErrorMessage"] = "Was unable to save your request. Please try again later";
+            //}
+            //ViewData["ErrorMessage"] = "Model state was invalid";
 
             return View(model);
         }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace CanineRanch.Services
 {
@@ -73,6 +74,22 @@ namespace CanineRanch.Services
                         Age = entity.Age,
                         IsFixed = entity.IsFixed
                     };
+            }
+        }
+
+        public IEnumerable<SelectListItem> GetDogsForDropdown()
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var dogQuery =
+                    ctx
+                    .Dogs
+                    .Select(e => new SelectListItem
+                    {
+                        Text = e.DogName,
+                        Value = e.DogID.ToString()
+                    });
+                return dogQuery.ToArray();
             }
         }
 

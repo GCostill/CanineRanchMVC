@@ -21,28 +21,16 @@ namespace CanineRanch.Services
         {
             var entity = new GroomingRequest()
             {
+                ID = _userId,
+                DogID = model.DogID,
+                ClientID = model.ClientID,
                 GroomFrequency = model.GroomFrequency,
                 FirstTimeGroom = model.FirstTimeGroom,
-                RequestTimeStamp = DateTime.Now,
-               // Dog.DogName = model.DogName
+                RequestTimeStamp = DateTime.UtcNow,
             };
-            //GET DOG BY NAME INPUTTED
+
             using(var ctx = new ApplicationDbContext())
             {
-                
-                //var dogToAdd = 
-                //    ctx
-                //        .Dogs
-                //        .Where(e => e.DogName == model.DogName)
-                //        .Select(e => new Dog
-                //         {
-                //             DogID = entity.Dog.DogID,
-                //             DogName = entity.Dog.DogName,
-                //             Age = entity.Dog.Age,
-                //             Breed = entity.Dog.Breed,
-                //             IsFixed = entity.Dog.IsFixed,
-                //         });
-
                 ctx.GroomingRequests.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
@@ -83,6 +71,7 @@ namespace CanineRanch.Services
                     {
                         RequestID = entity.RequestID,
                         DogID = entity.DogID,
+                        DogName = entity.Dog.DogName,
                         GroomFrequency = entity.GroomFrequency,
                         FirstTimeGroom = entity.FirstTimeGroom,
                         RequestTimeStamp = entity.RequestTimeStamp

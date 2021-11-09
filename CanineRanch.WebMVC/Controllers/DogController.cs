@@ -38,7 +38,7 @@ namespace CanineRanch.WebMVC.Controllers
 
             if (service.CreateDog(model))
             {
-                TempData["SaveResult"] = "Your Dog was craeted.";
+                TempData["SaveResult"] = "Your Dog was created.";
                 return RedirectToAction("Index");
             }
 

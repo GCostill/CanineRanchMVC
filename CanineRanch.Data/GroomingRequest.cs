@@ -17,13 +17,16 @@ namespace CanineRanch.Data
         public int GroomFrequency { get; set; }
         [Required]
         public bool FirstTimeGroom { get; set; }
-        [ForeignKey(nameof(Client))]
         [Required]
         public int ClientID { get; set; }
-        public virtual Client Client { get; set; }
-        [ForeignKey(nameof(Dog))]
         [Required]
         public int DogID { get; set; }
+        public virtual Client Client { get; set; }
         public virtual Dog Dog { get; set; }
+
+        public GroomingRequest()
+        {
+            RequestTimeStamp = DateTime.Now;
+        }
     }
 }
