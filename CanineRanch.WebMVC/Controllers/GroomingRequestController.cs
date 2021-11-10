@@ -58,24 +58,6 @@ namespace CanineRanch.WebMVC.Controllers
 
             ModelState.AddModelError(" ", "Request could not be created.");
 
-            //if (ModelState.IsValid)
-            //{
-            //    GroomingRequest groomingRequest = new GroomingRequest
-            //    {
-            //        DogID = model.DogID,
-            //        ClientID = model.ClientID
-            //    };
-            //    _ctx.GroomingRequests.Add(groomingRequest);
-
-            //    if (_ctx.SaveChanges() == 1)
-            //    {
-            //        TempData["SaveResult"] = "Your request was created";
-            //        return RedirectToAction("Index");
-            //    }
-            //    ViewData["ErrorMessage"] = "Was unable to save your request. Please try again later";
-            //}
-            //ViewData["ErrorMessage"] = "Model state was invalid";
-
             return View(model);
         }
 
