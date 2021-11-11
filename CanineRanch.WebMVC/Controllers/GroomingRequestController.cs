@@ -14,6 +14,7 @@ namespace CanineRanch.WebMVC.Controllers
     {
         private ApplicationDbContext _ctx = new ApplicationDbContext();
         // GET: GroomingRequest
+        //[Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var service = CreateGroomingRequestService();
@@ -49,6 +50,12 @@ namespace CanineRanch.WebMVC.Controllers
             }
 
             var service = CreateGroomingRequestService();
+
+            //if (_ctx.GroomingRequests.Find(model.DogID) != _ctx.GroomingRequests.)
+            //{
+            //    ModelState.AddModelError(" ", "Request already made for this dog");
+            //}
+
 
             if (service.CreateGroomingRequest(model))
             {

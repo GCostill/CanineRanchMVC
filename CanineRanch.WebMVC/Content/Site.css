@@ -23,3 +23,8 @@ textarea {
     max-width: 280px;
 }
 
+.image-logo {
+    max-height: 50px;
+    max-width: 50px;
+}
+
