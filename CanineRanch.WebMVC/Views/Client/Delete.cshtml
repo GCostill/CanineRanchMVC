@@ -4,9 +4,8 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Are you sure you want to delete your information?</h2>
 
-<h3>Are you sure you want to delete your information?</h3>
 <div>
     <h4>Profile Details</h4>
     <hr />
@@ -89,7 +88,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

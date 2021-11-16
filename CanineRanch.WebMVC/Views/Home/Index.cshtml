@@ -1,43 +1,48 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<section class="images-wrapper">
+    <div class="images" id="image1"></div>
+</section>
 <div class="jumbotron">
     <h1>Sugar Creek Canine Ranch</h1>
     <p class="lead">We're a small, family owned doggie care center that strives to get to know each and every fur baby so we can provide the care they need and have them feel as comfortable as possible while with us! We love and care for all breeds of dogs, no matter how big or small!</p>
 </div>
 
-<div class="row">
+<div class="row" id="myGroup">
     <div class="col-md-4">
         <h2>Overnight Stays</h2>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#overnightCollapse" data-parent="myGroup" role="button" aria-expanded="false" aria-controls="OvernightCollapse">
             Learn more
-        </a>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
-        </div>
+        </button>
     </div>
     <div class="col-md-4">
         <h2>Doggie Daycare</h2>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#daycareCollapse" data-parent="myGroup" role="button" aria-expanded="false" aria-controls="DaycareCollapse">
             Learn more
-        </a>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
-        </div>
+        </button>
     </div>
     <div class="col-md-4">
         <h2>Pet Grooming</h2>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#groomingCollapse" data-parent="myGroup" role="button" aria-expanded="false" aria-controls="GroomingCollapse">
             Learn more
-        </a>
-        <div class="collapse" id="collapseExample">
+        </button>
+    </div>
+
+    <div class="accordion-collapse">
+        <div class="collapse" id="overnightCollapse">
             <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                Overnight Stays. Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+        </div>
+        <div class="collapse" id="daycareCollapse">
+            <div class="card card-body">
+                Doggie Daycare. Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+        </div>
+        <div class="collapse" id="groomingCollapse">
+            <div class="card card-body">
+                Pet Grooming. Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
             </div>
         </div>
     </div>

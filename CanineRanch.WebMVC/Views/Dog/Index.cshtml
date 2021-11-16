@@ -9,7 +9,15 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.DogID)
@@ -26,26 +34,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DogID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DogName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Breed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsFixed)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DogID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DogID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DogID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Breed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFixed)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DogID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DogID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DogID })
+            </td>
+        </tr>
+    }
 
 </table>

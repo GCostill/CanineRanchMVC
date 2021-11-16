@@ -92,7 +92,7 @@ namespace CanineRanch.WebMVC.Controllers
             }
 
             ModelState.AddModelError(" ", "Your dog could not be updated.");
-            return View();
+            return View(model);
         }
 
         [ActionName("Delete")]

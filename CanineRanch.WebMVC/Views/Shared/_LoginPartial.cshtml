@@ -11,11 +11,11 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="@Url.Action("Index", "Client")">Profile</a></li>
             <li><a class="dropdown-item" href="@Url.Action("Index", "Dog")">Dogs</a></li>
-            @if (User.IsInRole("Admin"))
+            @*@if (User.IsInRole("Admin"))
             {
                 <li><a class="dropdown-item" href="@Url.Action("Index", "Client")">GroomingRequest</a></li>
-            }
-            <li><a class="dropdown-item" href="@Url.Action("Create", "GroomingRequest")">Grooming Requests</a></li>
+            }*@
+            <li><a class="dropdown-item" href="@Url.Action("", "GroomingRequest")">Grooming Requests</a></li>
             <li><a class="dropdown-item" href="@Url.Action("Index", "Manage")">Settings</a></li>
             <li><a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
         </ul>

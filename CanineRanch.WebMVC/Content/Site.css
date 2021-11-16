@@ -28,3 +28,16 @@ textarea {
     max-width: 50px;
 }
 
+.images
+{
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+#image1 {
+    background-color: aqua;
+}
+
+.form-group{
+    padding: 0px 0px 20px 0px;
+}

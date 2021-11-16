@@ -9,7 +9,14 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.RequestID)
@@ -26,25 +33,26 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RequestID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DogName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RequestTimeStamp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstTimeGroom)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.RequestID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RequestID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestTimeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstTimeGroom)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.RequestID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RequestID })
+            </td>
+        </tr>
+    }
 
 </table>

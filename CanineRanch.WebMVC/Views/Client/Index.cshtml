@@ -9,7 +9,14 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ClientID)
@@ -29,29 +36,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClientID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClientID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ClientID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ClientID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ClientID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ClientID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ClientID })
+            </td>
+        </tr>
+    }
 
 </table>
