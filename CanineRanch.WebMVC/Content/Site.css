@@ -30,12 +30,14 @@ textarea {
 
 .images
 {
-    height: 400px;
+    height: 600px;
     background-repeat: no-repeat;
 }
 
 #image1 {
-    background-color: aqua;
+   /* background-color: aqua;*/
+    background-image:url(./img/BuildingFrontDaytime.jpg);
+    background-size: 100% 120%
 }
 
 .form-group{
