@@ -79,33 +79,9 @@
     <Compile Include="Dog.cs" />
     <Compile Include="GroomingRequest.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202110262353099_InitialMigration.cs" />
-    <Compile Include="Migrations\202110262353099_InitialMigration.Designer.cs">
-      <DependentUpon>202110262353099_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110281642363_AddedGuidIDToDog.cs" />
-    <Compile Include="Migrations\202110281642363_AddedGuidIDToDog.Designer.cs">
-      <DependentUpon>202110281642363_AddedGuidIDToDog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110282341501_IDsAddedToRequestModels.cs" />
-    <Compile Include="Migrations\202110282341501_IDsAddedToRequestModels.Designer.cs">
-      <DependentUpon>202110282341501_IDsAddedToRequestModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111030125168_Migration.cs" />
-    <Compile Include="Migrations\202111030125168_Migration.Designer.cs">
-      <DependentUpon>202111030125168_Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111030248120_GotRidOfDateTime.cs" />
-    <Compile Include="Migrations\202111030248120_GotRidOfDateTime.Designer.cs">
-      <DependentUpon>202111030248120_GotRidOfDateTime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111030310439_UncommentedDateTimes.cs" />
-    <Compile Include="Migrations\202111030310439_UncommentedDateTimes.Designer.cs">
-      <DependentUpon>202111030310439_UncommentedDateTimes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111031108406_AddedDefaultDateTimeValue.cs" />
-    <Compile Include="Migrations\202111031108406_AddedDefaultDateTimeValue.Designer.cs">
-      <DependentUpon>202111031108406_AddedDefaultDateTimeValue.cs</DependentUpon>
+    <Compile Include="Migrations\202111170011085_InitCreate.cs" />
+    <Compile Include="Migrations\202111170011085_InitCreate.Designer.cs">
+      <DependentUpon>202111170011085_InitCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,26 +91,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110262353099_InitialMigration.resx">
-      <DependentUpon>202110262353099_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110281642363_AddedGuidIDToDog.resx">
-      <DependentUpon>202110281642363_AddedGuidIDToDog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110282341501_IDsAddedToRequestModels.resx">
-      <DependentUpon>202110282341501_IDsAddedToRequestModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111030125168_Migration.resx">
-      <DependentUpon>202111030125168_Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111030248120_GotRidOfDateTime.resx">
-      <DependentUpon>202111030248120_GotRidOfDateTime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111030310439_UncommentedDateTimes.resx">
-      <DependentUpon>202111030310439_UncommentedDateTimes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111031108406_AddedDefaultDateTimeValue.resx">
-      <DependentUpon>202111031108406_AddedDefaultDateTimeValue.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111170011085_InitCreate.resx">
+      <DependentUpon>202111170011085_InitCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

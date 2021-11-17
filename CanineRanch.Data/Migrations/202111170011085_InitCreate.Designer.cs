@@ -7,13 +7,13 @@ namespace CanineRanch.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddedGuidIDToDog : IMigrationMetadata
+    public sealed partial class InitCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedGuidIDToDog));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110281642363_AddedGuidIDToDog"; }
+            get { return "202111170011085_InitCreate"; }
         }
         
         string IMigrationMetadata.Source

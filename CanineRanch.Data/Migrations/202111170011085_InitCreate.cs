@@ -3,7 +3,7 @@ namespace CanineRanch.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class InitCreate : DbMigration
     {
         public override void Up()
         {
@@ -29,6 +29,7 @@ namespace CanineRanch.Data.Migrations
                 c => new
                     {
                         DogID = c.Int(nullable: false, identity: true),
+                        ID = c.Guid(nullable: false),
                         DogName = c.String(nullable: false),
                         Breed = c.String(),
                         Age = c.Int(nullable: false),
@@ -41,6 +42,7 @@ namespace CanineRanch.Data.Migrations
                 c => new
                     {
                         RequestID = c.Int(nullable: false, identity: true),
+                        ID = c.Guid(nullable: false),
                         RequestTimeStamp = c.DateTime(nullable: false),
                         GroomFrequency = c.Int(nullable: false),
                         FirstTimeGroom = c.Boolean(nullable: false),
