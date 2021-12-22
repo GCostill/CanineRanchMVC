@@ -1,7 +1,7 @@
 # CanineRanchMVC
 
 Welcome to the Sugar Creek Canine Ranch Webpage!
-This website uses bootstrap, C#, HTML, CSS and is deployed on Azure as of 11/16/2021: https://canineranchwebmvcdeployment.azurewebsites.net
+This website uses bootstrap, C#, HTML, CSS
 
 As a user in this website, you will be able to
 - Create a new user
